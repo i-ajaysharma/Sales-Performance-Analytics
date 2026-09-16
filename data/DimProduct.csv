@@ -1,0 +1,61 @@
+ProductID,ProductName,Category,SubCategory,UnitPrice,UnitCost
+P001,Laptop Basic,Electronics,Basic,1537.68,884.5
+P002,Laptop Pro,Electronics,Pro,97.66,53.33
+P003,Laptop Premium,Electronics,Premium,113.15,71.8
+P004,Monitor Basic,Electronics,Basic,1131.75,578.0
+P005,Monitor Pro,Electronics,Pro,137.01,96.66
+P006,Monitor Premium,Electronics,Premium,601.18,452.01
+P007,Smartphone Basic,Electronics,Basic,1219.14,857.09
+P008,Smartphone Pro,Electronics,Pro,623.65,399.04
+P009,Smartphone Premium,Electronics,Premium,343.79,253.79
+P010,Tablet Basic,Electronics,Basic,524.4,361.04
+P011,Tablet Pro,Electronics,Pro,837.2,404.51
+P012,Tablet Premium,Electronics,Premium,868.81,519.75
+P013,Headphones Basic,Electronics,Basic,1414.83,1040.3
+P014,Headphones Pro,Electronics,Pro,1356.52,791.88
+P015,Headphones Premium,Electronics,Premium,835.85,410.04
+P016,Printer Basic,Office,Basic,1526.06,1074.12
+P017,Printer Pro,Office,Pro,227.77,164.13
+P018,Printer Premium,Office,Premium,478.25,252.6
+P019,Office Chair Basic,Office,Basic,1494.66,958.38
+P020,Office Chair Pro,Office,Pro,695.94,374.13
+P021,Office Chair Premium,Office,Premium,1766.6,1229.15
+P022,Desk Basic,Office,Basic,852.6,478.71
+P023,Desk Pro,Office,Pro,1430.69,822.45
+P024,Desk Premium,Office,Premium,739.09,542.12
+P025,Keyboard Basic,Office,Basic,779.29,485.42
+P026,Keyboard Pro,Office,Pro,704.62,479.79
+P027,Keyboard Premium,Office,Premium,1301.36,781.74
+P028,Mouse Basic,Office,Basic,996.84,567.6
+P029,Mouse Pro,Office,Pro,1700.21,1135.13
+P030,Mouse Premium,Office,Premium,470.33,247.61
+P031,Backpack Basic,Accessories,Basic,203.5,120.45
+P032,Backpack Pro,Accessories,Pro,723.04,392.4
+P033,Backpack Premium,Accessories,Premium,1119.67,771.16
+P034,Webcam Basic,Accessories,Basic,1552.92,1185.29
+P035,Webcam Pro,Accessories,Pro,639.5,497.95
+P036,Webcam Premium,Accessories,Premium,1185.47,729.16
+P037,USB Hub Basic,Accessories,Basic,646.6,359.35
+P038,USB Hub Pro,Accessories,Pro,1120.56,686.73
+P039,USB Hub Premium,Accessories,Premium,1595.53,1171.41
+P040,Power Bank Basic,Accessories,Basic,435.66,236.04
+P041,Power Bank Pro,Accessories,Pro,742.53,568.5
+P042,Power Bank Premium,Accessories,Premium,1788.05,1041.65
+P043,Cable Basic,Accessories,Basic,1566.69,1215.35
+P044,Cable Pro,Accessories,Pro,1027.24,751.51
+P045,Cable Premium,Accessories,Premium,942.01,680.67
+P046,Productivity Suite Basic,Software,Basic,530.17,305.04
+P047,Productivity Suite Pro,Software,Pro,943.05,455.15
+P048,Productivity Suite Premium,Software,Premium,1530.52,910.11
+P049,Security Suite Basic,Software,Basic,1241.18,708.15
+P050,Security Suite Pro,Software,Pro,539.83,265.17
+P051,Security Suite Premium,Software,Premium,382.6,241.65
+P052,Design Suite Basic,Software,Basic,495.75,297.9
+P053,Design Suite Pro,Software,Pro,326.32,218.75
+P054,Design Suite Premium,Software,Premium,194.76,129.78
+P055,CRM License Basic,Software,Basic,768.97,396.96
+P056,CRM License Pro,Software,Pro,226.11,174.8
+P057,CRM License Premium,Software,Premium,330.14,176.98
+P058,Analytics License Basic,Software,Basic,996.5,611.43
+P059,Analytics License Pro,Software,Pro,317.16,198.68
+P060,Analytics License Premium,Software,Premium,138.39,100.18
