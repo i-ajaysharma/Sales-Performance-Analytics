@@ -1,0 +1,108 @@
+-- Create a proper Date table and mark it as Date table in Power BI.
+DateTable =
+ADDCOLUMNS(
+    CALENDAR(DATE(2024,1,1), DATE(2025,12,31)),
+    "Year", YEAR([Date]),
+    "Month No", MONTH([Date]),
+    "Month", FORMAT([Date],"MMMM"),
+    "Year Month", FORMAT([Date],"YYYY-MM"),
+    "Quarter", "Q" & FORMAT([Date],"Q")
+)
+
+Total Revenue = SUM(FactSales[NetSales])
+
+Total Profit = SUM(FactSales[Profit])
+
+Profit Margin % = DIVIDE([Total Profit], [Total Revenue])
+
+Total Orders =
+CALCULATE(
+    DISTINCTCOUNT(FactSales[OrderID]),
+    FactSales[Status] <> "Cancelled"
+)
+
+Total Customers =
+CALCULATE(
+    DISTINCTCOUNT(FactSales[CustomerID]),
+    FactSales[Status] <> "Cancelled"
+)
+
+Average Order Value = DIVIDE([Total Revenue], [Total Orders])
+
+Units Sold = SUM(FactSales[Quantity])
+
+Average Discount % = AVERAGE(FactSales[DiscountPct])
+
+Revenue LY =
+CALCULATE(
+    [Total Revenue],
+    DATEADD(DateTable[Date], -1, YEAR)
+)
+
+Revenue YoY % =
+DIVIDE(
+    [Total Revenue] - [Revenue LY],
+    [Revenue LY]
+)
+
+Revenue YTD =
+TOTALYTD(
+    [Total Revenue],
+    DateTable[Date]
+)
+
+Profit YTD =
+TOTALYTD(
+    [Total Profit],
+    DateTable[Date]
+)
+
+Target =
+SUM(SalesTargets[SalesTarget])
+
+Target Achievement % =
+DIVIDE([Total Revenue], [Target])
+
+Target Variance =
+[Total Revenue] - [Target]
+
+Target Status =
+IF([Target Achievement %] >= 1, "Achieved", "Below Target")
+
+Returned Orders =
+CALCULATE(
+    DISTINCTCOUNT(FactSales[OrderID]),
+    FactSales[Status] = "Returned"
+)
+
+Return Rate % =
+DIVIDE([Returned Orders], [Total Orders])
+
+Revenue per Customer =
+DIVIDE([Total Revenue], [Total Customers])
+
+Rank Product by Revenue =
+RANKX(
+    ALL(DimProduct[ProductName]),
+    [Total Revenue],
+    ,
+    DESC,
+    DENSE
+)
+
+Top Product Revenue =
+CALCULATE(
+    [Total Revenue],
+    TOPN(
+        1,
+        ALL(DimProduct[ProductName]),
+        [Total Revenue],
+        DESC
+    )
+)
+
+Revenue Share % =
+DIVIDE(
+    [Total Revenue],
+    CALCULATE([Total Revenue], ALL(DimProduct))
+)
